@@ -110,21 +110,7 @@ class PostController extends Controller
  
 
 
-// public function categories(Request $request)
-// {
-//     $query = Post::query();
 
-//     // Kategori parametresi varsa, filtrelemeyi uygula
-//     if ($request->has('category')) {
-//         $category = $request->query('category');
-//         $query->where('category', $category);
-//     }
-
-//     $perPage = 10; // Her sayfada gösterilecek gönderi sayısı
-//     $posts = $query->paginate($perPage);
-
-//     return response()->json($posts);
-// }
 public function createCategory(Request $request)
 {
     $name = $request->input('name');
