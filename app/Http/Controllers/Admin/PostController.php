@@ -10,42 +10,6 @@ use Illuminate\Support\Facades\Auth;
 
 class PostController extends Controller
 {
-    // public function index(Request $request)
-    // {
-
-    //     $pageSize = 10;
-    //     $page = $request->get('page', 1);
-    //     $categoryId = $request->get('category');
-    
-    
-    //     if ($categoryId) {
-            
-    //         $query = Post::where('categoryId', $categoryId);
-    //         $posts = $query->skip(($page - 1) * $pageSize)
-    //         ->take($pageSize)
-    //         ->get();
-    //         return response()->json([
-    //             'data' => $posts,
-    //             'current_page' => $page,
-    //             'per_page' => $pageSize,
-    //             'total' => $query->count(),
-    //         ]); 
-            
-    //     }
-    //     $query = Post::orderBy('created_at', 'desc');
-
-    //     $posts = $query->skip(($page - 1) * $pageSize)
-    //         ->take($pageSize)
-    //         ->get();
-    
-    //     return response()->json([
-    //         'data' => $posts,
-    //         'current_page' => $page,
-    //         'per_page' => $pageSize,
-    //         'total' => $query->count(),
-    //     ]);
-    // }
-    
 
     // Tüm blog yazılarını listeler
     public function index(Request $request)

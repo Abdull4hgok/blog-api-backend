@@ -39,13 +39,9 @@ Route::post('update/{id}', [PostController::class, 'update'])->name('update');
 Route::post('add', [PostController::class, 'store'])->name('add');
     Route::post('create-category', [PostController::class, 'createCategory']);
     Route::get('get-categories', [PostController::class, 'getCategories']);
-    // Route::post('/assignCategory/{categoryId}/{postId}', [PostController::class, 'assignCategory']);
     Route::get('all-posts', [PostController::class, 'allPosts']);
-    // Route::get('/categories/{categoryId}/posts', [PostController::class, 'getPostsByCategory']);
-    // Route::get('/categories/{categoryId}/posts', [PostController::class, 'getPostsByCategory']);
-
+   
     Route::get('posts', [PostController::class, 'index'])->name('posts');
-    Route::get('posts/{category}', [PostController::class, 'index'])->name('posts.category');
     Route::get('detail/{id}', [PostController::class, 'show'])->name('detail');
 
 });
