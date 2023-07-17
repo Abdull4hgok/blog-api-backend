@@ -135,23 +135,7 @@ public function createCategory(Request $request)
     }
 
     
-    public function assignCategory(Request $request, $postId)
-    {
-        $categoryId = $request->input('category_id');
-        
-        try {
-            $category = Category::findOrFail($categoryId);
-            $post = Post::findOrFail($postId);
-            
-            // Gönderinin kategori ID'sini güncelle
-            $post->category_id = $category->id;
-            $post->save();
-            
-            return response()->json('Post assigned to category');
-        } catch (\Exception $e) {
-            return response()->json('Category assignment failed');
-        }
-    }
+ 
     
 
 
