@@ -111,22 +111,22 @@ class PostController extends Controller
 
 
 
-public function createCategory(Request $request)
-{
-    $name = $request->input('name');
-    $category = Category::where('name', $name)->first();
+// public function createCategory(Request $request)
+// {
+//     $name = $request->input('name');
+//     $category = Category::where('name', $name)->first();
 
-    if (!$category) {
-        // İlgili kategori bulunamadıysa yeni bir kategori oluştur
-        $category = Category::create(['name' => $name]);
+//     if (!$category) {
+//         // İlgili kategori bulunamadıysa yeni bir kategori oluştur
+//         $category = Category::create(['name' => $name]);
         
-        if ($category) {
-            return response()->json('Kategori başarıyla oluşturuldu');
-        }
-    }
+//         if ($category) {
+//             return response()->json('Kategori başarıyla oluşturuldu');
+//         }
+//     }
     
-    return response()->json('Kategori oluşturma hatası');
-}
+//     return response()->json('Kategori oluşturma hatası');
+// }
 
 
     public function getCategories(Request $request)
